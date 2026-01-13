@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>Python + Data Course | Main Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, sans-serif;
+      background: linear-gradient(180deg, #020617, #020617);
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+    header {
+      padding: 80px 20px;
+      text-align: center;
+      background: radial-gradient(circle at top, #1e293b, #020617);
+    }
+    header h1 {
+      color: #22d3ee;
+      font-size: 3rem;
+    }
+    header p {
+      max-width: 950px;
+      margin: 20px auto;
+      opacity: 0.9;
+      font-size: 1.1rem;
+    }
+    section {
+      max-width: 1100px;
+      margin: 60px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .week-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 26px;
+      padding: 35px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+      text-align: left;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .week-card:hover {
+      transform: translateY(-8px);
+      background: rgba(34,211,238,0.08);
+    }
+    .week-card h2 {
+      color: #7dd3fc;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+    .week-card p { opacity: 0.85; margin-bottom: 10px; }
+    .week-card ul { margin-left: 20px; margin-bottom: 15px; }
+    .week-card a {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #22d3ee;
+      color: #020617;
+      text-decoration: none;
+      border-radius: 14px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .week-card a:hover { background: #38bdf8; }
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      opacity: 0.75;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Python + Data Course</h1>
+  <p>Басты беттен барлық апталарды көріп, әр аптаға өтіп практика мен мини-жобаларды орындай аласың.</p>
+</header>
+
+<section>
+  <div class="week-card">
+    <h2>Week 1 — Python Review for Data Thinking</h2>
+    <p><b>Goal:</b> Think in “data”, not just code</p>
+    <ul>
+      <li>Lists, dicts, sets recap</li>
+      <li>Loops vs data operations</li>
+      <li>Functions for data processing</li>
+      <li>File basics (txt)</li>
+    </ul>
+    <p><b>Mini Task:</b> Файлдан бағаларды оқып, орташа баллды есепте</p>
+    <a href="week1/index.html">Open Week 1</a>
+  </div>
+
+  <div class="week-card">
+    <h2>Week 2 — Working with CSV Files 📄</h2>
+    <p><b>Goal:</b> Real data starts here</p>
+    <ul>
+      <li>CSV structure (rows/columns)</li>
+      <li>csv.reader, csv.DictReader</li>
+      <li>Writing CSV files</li>
+    </ul>
+    <p><b>Mini Project:</b> Үлгерімі жоғары оқушылар тізімі</p>
+    <a href="week2_main.html">Open Week 2</a>
+  </div>
+
+  <div class="week-card">
+    <h2>Week 3 — JSON & Structured Data</h2>
+    <p><b>Goal:</b> Understand modern data formats</p>
+    <ul>
+      <li>JSON vs CSV</li>
+      <li>Nested data</li>
+      <li>Read/write JSON</li>
+    </ul>
+    <p><b>Mini Task:</b> Оқушы туралы толық есепті json файлға сақта</p>
+    <a href="week3_main.html">Open Week 3</a>
+  </div>
+
+  <div class="week-card">
+    <h2>Week 4 — Data Processing with collections</h2>
+    <p><b>Goal:</b> Fast & smart data analysis</p>
+    <ul>
+      <li>Counter</li>
+      <li>defaultdict</li>
+      <li>Frequency analysis</li>
+    </ul>
+    <p><b>Mini Project:</b> Мәтіннен ең жиі кездесетін 10 сөз</p>
+    <a href="week4_main.html">Open Week 4</a>
+  </div>
+
+  <div class="week-card">
+    <h2>Week 5 — Statistics for Data Analysis 📐</h2>
+    <p><b>Goal:</b> Meaning behind numbers</p>
+    <ul>
+      <li>Mean, median, mode</li>
+      <li>Standard deviation</li>
+      <li>Outliers</li>
+    </ul>
+    <p><b>Mini Task:</b> Қай сыныптың үлгерімі тұрақты?</p>
+    <a href="week5_main.html">Open Week 5</a>
+  </div>
+
+  <div class="week-card">
+    <h2>Week 6 — Introduction to Pandas 🐼</h2>
+    <p><b>Goal:</b> Real data analyst tools</p>
+    <ul>
+      <li>DataFrame</li>
+      <li>read_csv</li>
+      <li>Column operations</li>
+    </ul>
+    <p><b>Mini Project:</b> Сыныптар бойынша орташа балл</p>
+    <a href="week6_main.html">Open Week 6</a>
+  </div>
+
+  <div class="week-card">
+    <h2>Week 7 — Pandas Advanced + Grouping</h2>
+    <p><b>Goal:</b> Analyze big data easily</p>
+    <ul>
+      <li>groupby</li>
+      <li>Sorting</li>
+      <li>Missing values</li>
+    </ul>
+    <p><b>Mini Task:</b> Әр пән бойынша ең үздік 3 оқушы</p>
+    <a href="week7_main.html">Open Week 7</a>
+  </div>
+
+  <div class="week-card">
+    <h2>Week 8 — Data Visualization 📈</h2>
+    <p><b>Goal:</b> Make data understandable</p>
+    <ul>
+      <li>matplotlib</li>
+      <li>Line, bar, histogram</li>
+      <li>Labels & titles</li>
+    </ul>
+    <p><b>Mini Project:</b> Оқушы үлгерімінің графигі</p>
+    <a href="week8_main.html">Open Week 8</a>
+  </div>
+
+  <div class="week-card">
+    <h2>Week 9 — Data Cleaning & Validation 🧹</h2>
+    <p><b>Goal:</b> Real-world data problems</p>
+    <ul>
+      <li>Missing values</li>
+      <li>Wrong types</li>
+      <li>Duplicates</li>
+      <li>Exception handling</li>
+    </ul>
+    <p><b>Mini Task:</b> Қате деректерді автоматты түзету</p>
+    <a href="week9_main.html">Open Week 9</a>
+  </div>
+
+  <div class="week-card">
+    <h2>Week 10 — Capstone Project 🏆</h2>
+    <p><b>Goal:</b> School Data Analyzer</p>
+    <ul>
+      <li>Read CSV</li>
+      <li>Clean data</li>
+      <li>Analyze statistics</li>
+      <li>Visualize results</li>
+      <li>Export report (CSV + JSON)</li>
+      <li>Presentation & insights</li>
+    </ul>
+    <a href="week10_main.html">Open Week 10</a>
+  </div>
+
+</section>
+
+<footer>
+  Python + Data Course — General Main Page<br>
+  Navigate through all weeks and lessons
+</footer>
+
+</body>
+</html>
