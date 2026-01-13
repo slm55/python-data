@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 1 – Part 3 | Functions = Data Machines</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, sans-serif;
+      background: linear-gradient(180deg, #020617, #020617);
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: radial-gradient(circle at top, #1e293b, #020617);
+    }
+    header h1 {
+      color: #22d3ee;
+      font-size: 2.6rem;
+    }
+    header p {
+      max-width: 950px;
+      margin: 20px auto;
+      opacity: 0.9;
+      font-size: 1.05rem;
+    }
+    section {
+      max-width: 1150px;
+      margin: 50px auto;
+      padding: 35px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 26px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+    }
+    h2 { color: #67e8f9; }
+    h3 { color: #bae6fd; margin-top: 40px; }
+    .concept {
+      background: rgba(34,211,238,0.08);
+      padding: 18px;
+      border-radius: 14px;
+      margin: 20px 0;
+    }
+    pre {
+      background: #020617;
+      padding: 18px;
+      border-radius: 14px;
+      overflow-x: auto;
+      margin: 16px 0;
+      font-size: 0.95rem;
+    }
+    .explain { opacity: 0.9; margin-bottom: 10px; }
+    .task {
+      background: rgba(255,255,255,0.06);
+      padding: 14px;
+      border-radius: 14px;
+      margin: 10px 0;
+    }
+    .task span { color: #22d3ee; font-weight: bold; }
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      opacity: 0.75;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Lesson 1 – Part 3: FUNCTIONS = DATA MACHINES</h1>
+  <p>
+    Бұл бөлімде сен функцияны <b>код жазу үшін емес</b>,
+    <b>дерек өңдейтін машина</b> ретінде түсінесің.
+    <br><br>
+    ⚠️ Бұл бетте <b>ешқандай қосымша кітапхана қолданылмайды</b>.
+    Тек: <b>list + loop + function</b>.
+  </p>
+</header>
+
+<section>
+  <h2>1. Функция деген не? (Machine mindset)</h2>
+
+  <div class="concept">
+    <p><b>Функция</b> — бұл:</p>
+    <ul>
+      <li>📥 кіріс дерек (input)</li>
+      <li>⚙️ өңдеу (process)</li>
+      <li>📤 нәтиже (output)</li>
+    </ul>
+    <p>Функция ішіндегі логика — <b>қайта қолдану</b> үшін жазылады.</p>
+  </div>
+
+  <h3>Қате түсінік ❌</h3>
+  <pre>
+def calc():
+    nums = [3, 5, 2]
+    total = 0
+    for x in nums:
+        total += x
+    print(total)
+
+calc()
+  </pre>
+
+  <p class="explain">👆 Бұл функция емес, жай ғана кодты орау.</p>
+
+  <h3>Дұрыс түсінік ✅</h3>
+  <pre>
+def sum_list(nums):
+    total = 0
+    for x in nums:
+        total += x
+    return total
+
+result = sum_list([3, 5, 2])
+print(result)
+  </pre>
+
+  <p class="explain">👆 Функция дерек алады және нәтиже қайтарады.</p>
+</section>
+
+<section>
+  <h2>2. return vs print</h2>
+
+  <div class="concept">
+    <p><b>print</b> — экранға шығару.</p>
+    <p><b>return</b> — функцияның нәтижесі.</p>
+  </div>
+
+  <h3>Неге print жеткіліксіз?</h3>
+  <pre>
+def average(nums):
+    total = 0
+    for n in nums:
+        total += n
+    print(total / len(nums))
+
+x = average([4, 6, 8])
+print(x)
+  </pre>
+
+  <p class="explain">👆 x = None → нәтиже сақталмайды.</p>
+
+  <h3>Дұрыс нұсқа</h3>
+  <pre>
+def average(nums):
+    total = 0
+    for n in nums:
+        total += n
+    return total / len(nums)
+
+x = average([4, 6, 8])
+print(x)
+  </pre>
+</section>
+
+<section>
+  <h2>3. Функция + loop = reusable logic</h2>
+
+  <h3>Мысал: тек оң сандар</h3>
+  <pre>
+def positive_numbers(nums):
+    result = []
+    for n in nums:
+        if n > 0:
+            result.append(n)
+    return result
+
+print(positive_numbers([3, -1, 5, 0]))
+  </pre>
+
+  <h3>Мысал: орташа мәннен жоғары</h3>
+  <pre>
+def above_average(nums):
+    total = 0
+    for n in nums:
+        total += n
+    avg = total / len(nums)
+
+    result = []
+    for n in nums:
+        if n > avg:
+            result.append(n)
+    return result
+  </pre>
+</section>
+
+<section>
+  <h2>4. PRACTICE — Functions only</h2>
+
+  <p><b>Ереже:</b>
+    <ul>
+      <li>Әр есеп — <b>функция</b> болуы керек</li>
+      <li>Функция параметр арқылы дерек алады</li>
+      <li>Нәтижені <b>return</b> етеді</li>
+    </ul>
+  </p>
+
+  <h3>🟢 EASY (1–25)</h3>
+
+  <div class="task"><span>1.</span> nums = [2,4,6] → қосындысын қайтаратын функция жаз.</div>
+  <div class="task"><span>2.</span> nums = [2,4,6] → элемент санын қайтаратын функция.</div>
+  <div class="task"><span>3.</span> nums = [2,4,6] → ең үлкен санды табатын функция.</div>
+  <div class="task"><span>4.</span> nums = [2,4,6] → ең кіші санды табатын функция.</div>
+  <div class="task"><span>5.</span> nums = [2,4,6] → орташа мәнді қайтаратын функция.</div>
+
+  <div class="task"><span>6.</span> grades = [5,4,3] → 5-тердің санын қайтаратын функция.</div>
+  <div class="task"><span>7.</span> grades = [5,4,3] → тек 4 пен 5-ті қайтаратын функция.</div>
+  <div class="task"><span>8.</span> grades = [5,4,3] → 3-тен үлкен бағаларды қайтаратын функция.</div>
+  <div class="task"><span>9.</span> grades = [5,4,3] → ең үлкен бағаны қайтаратын функция.</div>
+  <div class="task"><span>10.</span> grades = [5,4,3] → ең кіші бағаны қайтаратын функция.</div>
+
+  <h3>🟡 MEDIUM (26–55)</h3>
+
+  <div class="task"><span>26.</span> nums = [7,2,9,1] → орташа мәннен үлкен сандар.</div>
+  <div class="task"><span>27.</span> nums = [7,2,9,1] → орташа мәннен кіші сандар.</div>
+  <div class="task"><span>28.</span> nums = [7,2,9,1] → max пен min айырмасын қайтаратын функция.</div>
+  <div class="task"><span>29.</span> nums = [7,2,9,1] → ең жақын санды орташаға.</div>
+  <div class="task"><span>30.</span> nums = [7,2,9,1] → тек тақ сандарды қайтаратын функция.</div>
+
+  <div class="task"><span>31.</span> grades = [3,5,4,2,5] → үлгерімі жақсы бағалар.</div>
+  <div class="task"><span>32.</span> grades = [3,5,4,2,5] → үлгерімі төмен бағалар.</div>
+  <div class="task"><span>33.</span> grades = [3,5,4,2,5] → орташа баллдан жоғары бағалар.</div>
+  <div class="task"><span>34.</span> grades = [3,5,4,2,5] → орташа баллдан төмен бағалар.</div>
+  <div class="task"><span>35.</span> grades = [3,5,4,2,5] → үлгерім пайызын есептейтін функция.</div>
+
+  <h3>🔴 HARD (56–90)</h3>
+
+  <div class="task"><span>56.</span> nums = [8,3,6,2,9] → екі ең үлкен сан.</div>
+  <div class="task"><span>57.</span> nums = [8,3,6,2,9] → екі ең кіші сан.</div>
+  <div class="task"><span>58.</span> nums = [8,3,6,2,9] → әр элементтің орташаға айырмасы.</div>
+  <div class="task"><span>59.</span> nums = [8,3,6,2,9] → орташаға ең алыс сан.</div>
+  <div class="task"><span>60.</span> nums = [8,3,6,2,9] → manual sort функциясы.</div>
+
+  <div class="task"><span>61.</span> grades = [2,3,4,5,5] → ең жиі кездесетін баға.</div>
+  <div class="task"><span>62.</span> grades = [2,3,4,5,5] → ең сирек баға.</div>
+  <div class="task"><span>63.</span> grades = [2,3,4,5,5] → 3 категорияға бөлу.</div>
+  <div class="task"><span>64.</span> grades = [2,3,4,5,5] → барлық есептерді бір функцияда.</div>
+  <div class="task"><span>65.</span> grades = [2,3,4,5,5] → толық статистика қайтар.</div>
+</section>
+
+<footer>
+  Python + Data Course — Lesson 1 / Part 3<br>
+  Focus: Functions as Data Machines
+</footer>
+
+</body>
+</html>

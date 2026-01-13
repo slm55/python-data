@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 1 – Part 1 | Data & Lists</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, sans-serif;
+      background: linear-gradient(180deg, #020617, #020617);
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: radial-gradient(circle at top, #1e293b, #020617);
+    }
+    header h1 {
+      color: #38bdf8;
+      font-size: 2.6rem;
+    }
+    header p {
+      max-width: 900px;
+      margin: 20px auto;
+      opacity: 0.9;
+      font-size: 1.05rem;
+    }
+    section {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 35px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 26px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+    }
+    h2 {
+      color: #7dd3fc;
+    }
+    h3 {
+      color: #bae6fd;
+      margin-top: 40px;
+    }
+    .concept {
+      background: rgba(56,189,248,0.08);
+      padding: 18px;
+      border-radius: 14px;
+      margin: 20px 0;
+    }
+    pre {
+      background: #020617;
+      padding: 18px;
+      border-radius: 14px;
+      overflow-x: auto;
+      margin: 16px 0;
+      font-size: 0.95rem;
+    }
+    .explain {
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
+    .task {
+      background: rgba(255,255,255,0.06);
+      padding: 14px;
+      border-radius: 14px;
+      margin: 10px 0;
+    }
+    .task span {
+      color: #38bdf8;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      opacity: 0.75;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Lesson 1 – Part 1: DATA & LIST</h1>
+  <p>
+    Бұл бет — Python + Data курсының <b>ең маңызды беттерінің бірі</b>.
+    Мұнда сен <b>list деген не</b>, <b>дерек қалай сақталады</b>,
+    және <b>неге list — data analysis-тің негізі</b> екенін үйренесің.
+    <br><br>
+    📌 Барлық мысалдарды көшіруге болады.  
+    📌 Барлық тапсырмаларда дерек <b>алдын ала берілген</b>.
+  </p>
+</header>
+
+<section>
+  <h2>1. DATA деген не?</h2>
+
+  <div class="concept">
+    <p><b>Анықтама:</b> Data (дерек) — бұл мағынасы бар ақпарат.</p>
+    <p>Python-да дерек тек бір сан емес. Дерек — бірнеше мәннің жиынтығы.</p>
+  </div>
+
+  <h3>Мысалдар</h3>
+  <pre>
+# Бір сан (дерек емес)
+x = 5
+
+# Бір оқушының бағалары (дерек)
+grades = [5, 4, 3, 5]
+
+# Бір сыныптың бағалары (үлкен дерек)
+class_grades = [5,4,3,5,4,2,5,3]
+  </pre>
+
+  <p class="explain">
+    👆 Мұнда <code>grades</code> және <code>class_grades</code> — дерек,
+    себебі оларды талдауға болады.
+  </p>
+</section>
+
+<section>
+  <h2>2. LIST деген не?</h2>
+
+  <div class="concept">
+    <p><b>List</b> — бұл бірнеше мәнді бір айнымалыда сақтайтын контейнер.</p>
+    <p>Python-да деректердің 80% list ішінде болады.</p>
+  </div>
+
+  <h3>2.1 List қалай құрылады?</h3>
+  <pre>
+nums = [3, 7, 2, 9, 5]
+grades = [5, 4, 3, 5, 4]
+  </pre>
+
+  <p class="explain">[] — list екенін көрсетеді.</p>
+
+  <h3>2.2 List элементтерін оқу</h3>
+  <pre>
+nums = [3, 7, 2, 9, 5]
+
+print(nums[0])  # 3
+print(nums[1])  # 7
+print(nums[-1]) # 5
+  </pre>
+
+  <p class="explain">Python-да санау 0-ден басталады.</p>
+</section>
+
+<section>
+  <h2>3. List-пен дайын операциялар</h2>
+
+  <h3>3.1 Элемент саны</h3>
+  <pre>
+nums = [3, 7, 2, 9, 5]
+print(len(nums))
+  </pre>
+
+  <h3>3.2 Қосынды, min, max</h3>
+  <pre>
+nums = [3, 7, 2, 9, 5]
+
+print(sum(nums))
+print(min(nums))
+print(max(nums))
+  </pre>
+
+  <p class="explain">Бұл функциялар data analysis-та өте жиі қолданылады.</p>
+</section>
+
+<section>
+  <h2>4. PRACTICE — тек list (Individual)</h2>
+
+  <p><b>Нұсқау:</b> Барлық есептерде дайын list берілген. 
+     Алдыңдағы мысалдарға қарап орында.</p>
+
+  <h3>🟢 EASY (1–20)</h3>
+
+  <div class="task"><span>1.</span> nums = [4, 9, 1, 7] — элементтер санын тап.</div>
+  <div class="task"><span>2.</span> nums = [4, 9, 1, 7] — барлық элементтерді экранға шығар.</div>
+  <div class="task"><span>3.</span> nums = [4, 9, 1, 7] — ең үлкен санды тап.</div>
+  <div class="task"><span>4.</span> nums = [4, 9, 1, 7] — ең кіші санды тап.</div>
+  <div class="task"><span>5.</span> nums = [4, 9, 1, 7] — қосындысын есепте.</div>
+
+  <div class="task"><span>6.</span> grades = [5,4,3,5,4] — орташа баллды есепте.</div>
+  <div class="task"><span>7.</span> grades = [5,4,3,5,4] — неше 5 бар екенін тап.</div>
+  <div class="task"><span>8.</span> grades = [5,4,3,5,4] — бірінші элементті шығар.</div>
+  <div class="task"><span>9.</span> grades = [5,4,3,5,4] — соңғы элементті шығар.</div>
+  <div class="task"><span>10.</span> grades = [5,4,3,5,4] — min және max бірге шығар.</div>
+
+  <h3>🟡 MEDIUM (21–40)</h3>
+
+  <div class="task"><span>21.</span> nums = [6,2,9,4,1] — тек жұп сандардан жаңа list құр.</div>
+  <div class="task"><span>22.</span> nums = [6,2,9,4,1] — әр санды 2-ге көбейт.</div>
+  <div class="task"><span>23.</span> nums = [6,2,9,4,1] — әр элементке 1 қосып, жаңа list жаса.</div>
+  <div class="task"><span>24.</span> nums = [6,2,9,4,1] — тек 5-тен үлкен сандарды жина.</div>
+  <div class="task"><span>25.</span> nums = [6,2,9,4,1] — кері тәртіпте шығар.</div>
+
+  <div class="task"><span>26.</span> grades = [3,4,5,2,5] — орташа балл ≥ 4 пе?</div>
+  <div class="task"><span>27.</span> grades = [3,4,5,2,5] — тек 4 пен 5-ті қалдыр.</div>
+  <div class="task"><span>28.</span> grades = [3,4,5,2,5] — жаңа list: (баға + 1).</div>
+  <div class="task"><span>29.</span> grades = [3,4,5,2,5] — неше элемент бар?</div>
+  <div class="task"><span>30.</span> grades = [3,4,5,2,5] — min, max, avg бірге шығар.</div>
+
+  <h3>🔴 HARD (41–60)</h3>
+
+  <div class="task"><span>41.</span> nums = [8,3,6,2,9] — max қолданбай ең үлкен санды тап.</div>
+  <div class="task"><span>42.</span> nums = [8,3,6,2,9] — min қолданбай ең кіші санды тап.</div>
+  <div class="task"><span>43.</span> nums = [8,3,6,2,9] — орташа мәннен үлкен сандарды жина.</div>
+  <div class="task"><span>44.</span> nums = [8,3,6,2,9] — орташа мәннен кіші сандарды жина.</div>
+  <div class="task"><span>45.</span> nums = [8,3,6,2,9] — орташаға ең жақын санды тап.</div>
+</section>
+
+<footer>
+  Python + Data Course — Lesson 1 / Part 1<br>
+  Focus: Understanding Lists as Data
+</footer>
+
+</body>
+</html>
